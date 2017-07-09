@@ -1,8 +1,40 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Başlıksız Belge</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
 </head>
-<body>
-<h1>BOOTCAMP</h1>
-</body>
 
+<body >
+<div ng-app="" ng-init="myCol='lightblue'">
+
+<input style="background-color:{{myCol}}" ng-model="myCol" value="{{myCol}}">
+
+</div>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}}
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);   
+app.controller('myCtrl', function($scope) {
+    $scope.firstName= "mustafa";
+    $scope.lastName= "babayigit";
+});
+</script>
+
+
+
+
+
+
+
+</body>
 </html>
